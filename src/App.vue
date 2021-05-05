@@ -5,27 +5,18 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, reactive } from "vue";
 
 export default defineComponent({
   name: "App",
   components: {},
-  data() {
-    return {
+  setup() {
+    const state = reactive({
       name: "Link",
-      age: 25 as number | string,
-    };
+      age: 25 as string | number,
+    });
   },
-  methods: {
-    changeName(newName: string) {
-      this.name = newName;
-      return newName;
-    },
-    changeAge(newAge: number | string) {
-      this.age = newAge;
-      return newAge;
-    },
-  },
+  methods: {},
 });
 </script>
 
