@@ -1,15 +1,19 @@
 <template>
   <div class="app">
-    <div class="job" :key="job.id" v-for="job in jobs">{{ job.title }}</div>
+    <JobList :jobs="jobs" />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref } from "vue";
 import Job from "@/types/Job";
+import JobList from "@/components/JobList.vue";
 
 export default defineComponent({
   name: "App",
+  components: {
+    JobList,
+  },
   setup() {
     const jobs = ref<Job[]>([
       {
