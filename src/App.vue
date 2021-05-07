@@ -1,5 +1,7 @@
 <template>
   <div class="app">
+    <button>Order by title</button>
+    <button>Order by salary</button>
     <JobList :jobs="jobs" />
   </div>
 </template>
