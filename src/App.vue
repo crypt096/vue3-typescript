@@ -1,8 +1,8 @@
 <template>
   <div class="app">
-    <button>Order by title</button>
-    <button>Order by salary</button>
-    <button>Order by location</button>
+    <button @click="handleClick('title')">Order by title</button>
+    <button @click="handleClick('salary')">Order by salary</button>
+    <button @click="handleClick('location')">Order by location</button>
     <JobList :jobs="jobs" />
   </div>
 </template>
