@@ -3,7 +3,7 @@
     <button @click="handleClick('title')">Order by title</button>
     <button @click="handleClick('salary')">Order by salary</button>
     <button @click="handleClick('location')">Order by location</button>
-    <JobList :jobs="jobs" />
+    <JobList :jobs="jobs" :order="order" />
   </div>
 </template>
 
@@ -56,6 +56,7 @@ export default defineComponent({
     return {
       jobs,
       handleClick,
+      order,
     };
   },
 });
