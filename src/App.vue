@@ -2,6 +2,7 @@
   <div class="app">
     <button>Order by title</button>
     <button>Order by salary</button>
+    <button>Order by location</button>
     <JobList :jobs="jobs" />
   </div>
 </template>
